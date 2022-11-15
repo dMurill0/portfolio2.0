@@ -20,9 +20,9 @@ export default function Header({}: Props) {
         duration:1.5,
       }}>
         {/* {Social Icons} */}
-        <SocialIcon url="https://www.linkedin.com/in/daniel-murillo-garz%C3%B3n-0bb8b014b/" fgColor="gray" bgColor="transparent"/>
-        <SocialIcon network="github" url="https://github.com/dMurill0" fgColor="gray" bgColor="transparent"/>
-        <SocialIcon network="twitter" url="https://twitter.com/MuRiPKR" fgColor="gray" bgColor="transparent"/>
+        <SocialIcon className="rounded-full hover:bg-[#F7AB0A]/80" url="https://www.linkedin.com/in/daniel-murillo-garz%C3%B3n-0bb8b014b/" fgColor="gray" bgColor="transparent"/>
+        <SocialIcon className="rounded-full hover:bg-[#F7AB0A]/50" network="github" url="https://github.com/dMurill0" fgColor="gray" bgColor="transparent"/>
+        <SocialIcon className="rounded-full hover:bg-[#F7AB0A]/30" network="twitter" url="https://twitter.com/MuRiPKR" fgColor="gray" bgColor="transparent"/>
       </motion.div>
       <motion.div
       initial={{
@@ -38,7 +38,7 @@ export default function Header({}: Props) {
       transition={{
         duration:1,
       }}>
-        <SocialIcon className="cursor-pointer" network="email" fgColor="gray" bgColor="transparent"/>
+        <SocialIcon className="cursor-pointer rounded-full hover:bg-[#F7AB0A]/80 mr-2" network="email" fgColor="gray" bgColor="transparent"/>
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Contacta conmigo</p>
       </motion.div>
     </header>

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-css-tags */
 import Head from "next/head";
+import About from "../components/About";
 import Content from "../components/Content";
 import Header from "../components/Header";
 
@@ -14,10 +15,10 @@ export default function Home() {
       <Header />
       {/* {Content} */}
       <section id="content" className="snap-center">
-        <Content  />
+        <Content />
       </section>
       {/* {About} */}
-
+      <About />
       {/* {Experience} */}
 
       {/* {Skills} */}
