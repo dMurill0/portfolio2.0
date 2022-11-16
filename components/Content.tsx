@@ -3,28 +3,49 @@ import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 export default function Content({}: Props) {
   const [text, count] = useTypewriter({
-    words: ["Hola soy Daniel Murillo", "Me-gusta-el-front", "Pero-más-el-end"],
+    words: [
+      "Hola, soy Daniel Murillo",
+      "<MeGustaHacerPáginasModernas />",
+      "con-diseños-responsive.jsx",
+    ],
     loop: true,
     delaySpeed: 2000,
   });
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <img
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="/face.jpg"
-        alt="face"
-      />
+      <motion.div
+        initial={{
+          z: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          z: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 2.5,
+        }}
+      >
+        <img
+          className="relative rounded-full h-40 w-40 mx-auto object-cover"
+          src="/face2.jpg"
+          alt="face"
+        />
+      </motion.div>
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Front-end developer
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-4xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
