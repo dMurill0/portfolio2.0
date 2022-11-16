@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 export default function Projects({}: Props) {
-  return (
-    <div>Projects</div>
-  )
+  return <div></div>;
 }

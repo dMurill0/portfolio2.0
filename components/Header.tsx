@@ -70,10 +70,10 @@ export default function Header({}: Props) {
             bgColor="transparent"
             href="#contact"
           />
-        </Link>
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-[#F7AB0A]">
           Contacta conmigo
         </p>
+        </Link>
       </motion.div>
     </header>
   );

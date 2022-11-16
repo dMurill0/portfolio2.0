@@ -1,18 +1,24 @@
 import React from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { emitWarning } from "process";
 type Props = {};
+type Inputs = {
+  Nombre: string;
+  Asunto: string;
+  Email: string;
+  Mensaje: string;
+};
 
 function Contact({}: Props) {
-  const [text, count] = useTypewriter({
-    words: [
-      "Aquí te dejo mi correo..",
-      "y mi número de telefono",
-      "so.. call me maybe!",
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
+  const {
+    register,
+    handleSubmit,
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = `mailto:sittingbout@gmail?subject=${formData.Asunto}&body=Hola, mi nombre es ${formData.Nombre}: ${formData.Mensaje} (${formData.Email})`
+  };
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center  ">
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -33,14 +39,23 @@ function Contact({}: Props) {
             <tr />
           </div>
         </div>
-        <form className="flex flex-col space-y-2 w-fit mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
           <div className="flex space-x-2">
-            <input className="contactInput" type="text" placeholder="Nombre"/>
-            <input className="contactInput" type="text" placeholder="Apellidos"/>
+            <input {...register('Nombre')} className="contactInput" type="text" placeholder="Nombre" />
+            <input {...register('Email')}
+              className="contactInput"
+              type="email"
+              placeholder="E-Mail"
+            />
           </div>
-          <input className="contactInput" type="email" placeholder="E-mail"  />
-          <textarea className="contactInput" placeholder="Mensaje"/>
-          <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold" type="submit">Enviar</button>
+          <input {...register('Asunto')} className="contactInput" type="text" placeholder="Asunto" />
+          <textarea {...register('Mensaje')} className="contactInput" placeholder="Mensaje" />
+          <button
+            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
+            type="submit"
+          >
+            Enviar
+          </button>
         </form>
       </div>
     </div>
