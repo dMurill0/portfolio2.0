@@ -24,14 +24,14 @@ export default function Header({}: Props) {
       >
         {/* {Social Icons} */}
         <SocialIcon
-          className="rounded-full hover:bg-[#F7AB0A]/80"
+          className="rounded-full hover:bg-secondary/80"
           url="https://www.linkedin.com/in/daniel-murillo-garz%C3%B3n-0bb8b014b/"
           fgColor="white"
           bgColor="transparent"
           target="_blank"
         />
         <SocialIcon
-          className="rounded-full hover:bg-[#F7AB0A]/80"
+          className="rounded-full hover:bg-secondary/80"
           network="github"
           url="https://github.com/dMurill0"
           fgColor="white"
@@ -39,7 +39,7 @@ export default function Header({}: Props) {
           target="_blank"
         />
         <SocialIcon
-          className="rounded-full hover:bg-[#F7AB0A]/80"
+          className="rounded-full hover:bg-secondary/80"
           network="twitter"
           url="https://twitter.com/MuRiPKR"
           fgColor="white"
@@ -64,13 +64,13 @@ export default function Header({}: Props) {
       >
         <Link href="#contact">
           <SocialIcon
-            className="cursor-pointer rounded-full hover:bg-[#F7AB0A]/80 mr-2"
+            className="cursor-pointer rounded-full hover:bg-secondary/80 mr-2"
             network="email"
             fgColor="white"
             bgColor="transparent"
             href="#contact"
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-[#F7AB0A]">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-secondary/80">
             Contacta conmigo
           </p>
         </Link>

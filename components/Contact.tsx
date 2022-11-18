@@ -30,11 +30,11 @@ function Contact({}: Props) {
         </h4> */}
         <div className="space-y-5">
           <div className="flex items-center space-x-3 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-secondary h-7 w-7 animate-pulse" />
             <p className="text-2xl">+34 630382831</p>
           </div>
           <div className="flex items-center space-x-3 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7" />
+            <EnvelopeIcon className="text-secondary h-7 w-7" />
             <p className="text-2xl">sittingbout@gmail.com</p>
             <tr />
           </div>
@@ -58,6 +58,7 @@ function Contact({}: Props) {
           </button>
         </form>
       </div>
+      
     </div>
   );
 }
