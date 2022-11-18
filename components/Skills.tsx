@@ -25,7 +25,7 @@ export default function Skills({}: Props) {
         Pase el ratón sobre la skill para más info
       </h3>
       {/* SKILLS */}
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-3 gap-1 md:grid-cols-4 xl:grid-cols-4 mt-20">
         {/* HTML */}
         <div className="group relative flex cursor-pointer">
           <motion.img
@@ -334,7 +334,7 @@ export default function Skills({}: Props) {
               <p className="text-2xl font-bold text-black opacity-100 text-center">
                 VUE.JS
               </p>
-              <Image src="/3star.png" alt="" width="100" height="100" />
+              <Image src="/3stars.png" alt="" width="100" height="100" />
             </div>
           </div>
         </div>

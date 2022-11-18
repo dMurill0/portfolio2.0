@@ -34,7 +34,7 @@ function Projects({}: Props) {
       }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 "
     >
-      <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl text-center">
+      <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl text-center hidden xl:block">
         Proyectos
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
@@ -42,7 +42,7 @@ function Projects({}: Props) {
         {trabajos.map((trabajo, i) => (
           <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
             <Link href={trabajo.url} target="_blank">
-              <img className="h-80 mt-10 border-solid border-2 border-primary" src={`/${trabajo.id}.jpg`} alt="" />
+              <img className="h-60 mt-10 " src={`/${trabajo.id}.jpg`} alt="" />
             </Link>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <Link
