@@ -1,11 +1,11 @@
 export const trabajos = [
     {
-        "id": "project1",
-        "nombre": "API Google",
-        "url": "",
-        "tecnologias": "Wordpress,API",
+        "id": "project10",
+        "nombre": "Shopie. Tienda online de zapatillas",
+        "url": "https://shopie2.vercel.app/",
+        "tecnologias": "React",
         "categorias": "Desarrollo web",
-        "descripcion": "Implementación del buscador de Google en la web de la empresa Infoser Sistemas S.A."
+        "descripcion": "Tienda online para comprar zapatillas. En un futura se implementará un blog"
     },
     {
         "id": "project2",
@@ -15,6 +15,15 @@ export const trabajos = [
         "categorias": "Front-end,API",
         "descripcion": "Aplicación que muestra las películas más populares y nos muestra la imagen de portada, puntuación en imdb y la sinospsis. Además se puede realizar una búsqueda entre todas las películas. "
     },
+    {
+        "id": "project1",
+        "nombre": "API Google",
+        "url": "",
+        "tecnologias": "Wordpress,API",
+        "categorias": "Desarrollo web",
+        "descripcion": "Implementación del buscador de Google en la web de la empresa Infoser Sistemas S.A."
+    },
+
     {
         "id": "project3",
         "nombre": "Saboteur",

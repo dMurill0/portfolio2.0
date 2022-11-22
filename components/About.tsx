@@ -56,7 +56,8 @@ export default function About({}: Props) {
           Me llamo Daniel Murillo Garzón, un desarrollador front-end que ha
           realizado numerosos proyectos tanto en la universidad como proyectos
           propios de manera autodidacta. También tengo experiencia como
-          desarrollador Full-Stack.
+          desarrollador Full-Stack. Actualmente estoy realizando proyectos como
+          freelance, principalmente focalizados en React y Next.js
         </p>
       </motion.div>
     </motion.div>
