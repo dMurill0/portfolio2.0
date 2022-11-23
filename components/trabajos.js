@@ -10,7 +10,7 @@ export const trabajos = [
     {
         "id": "project2",
         "nombre": "MovieDb App",
-        "url": "https://moviedb-d6788.web.app/index.html",
+        "url": "https://movie-app-kohl-delta.vercel.app/",
         "tecnologias": "HTML,CSS,JS,API, Boostrap",
         "categorias": "Front-end,API",
         "descripcion": "Aplicación que muestra las películas más populares y nos muestra la imagen de portada, puntuación en imdb y la sinospsis. Además se puede realizar una búsqueda entre todas las películas. "
