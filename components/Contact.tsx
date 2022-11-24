@@ -21,7 +21,7 @@ function Contact({}: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center  ">
-      <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl hidden md:block xl:block">
+      <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-900 dark:text-gray-500 text-2xl hidden md:block xl:block">
         Contacta conmigo
       </h3>
       <div className="flex flex-col space-y-10">
@@ -30,11 +30,11 @@ function Contact({}: Props) {
         </h4> */}
         <div className="space-y-5">
           <div className="flex items-center space-x-3 justify-center">
-            <PhoneIcon className="text-secondary h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-blue-500 dark:text-secondary h-7 w-7 animate-pulse" />
             <p className="text-2xl">+34 630382831</p>
           </div>
           <div className="flex items-center space-x-3 justify-center">
-            <EnvelopeIcon className="text-secondary h-7 w-7" />
+            <EnvelopeIcon className="text-blue-500 dark:text-secondary h-7 w-7" />
             <p className="text-2xl">sittingbout@gmail.com</p>
             <tr />
           </div>
@@ -51,7 +51,7 @@ function Contact({}: Props) {
           <input {...register('Asunto')} className="contactInput" type="text" placeholder="Asunto" />
           <textarea {...register('Mensaje')} className="contactInput" placeholder="Mensaje" />
           <button
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
+            className="bg-blue-500 dark:bg-[#F7AB0A] py-5 px-10 rounded-md text-white dark:text-black font-bold"
             type="submit"
           >
             Enviar

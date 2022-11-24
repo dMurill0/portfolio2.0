@@ -37,7 +37,7 @@ function Projects({}: Props) {
       <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl text-center hidden xl:block">
         Proyectos
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 dark:scrollbar-thumb-[#F7AB0A]/80 dark:scrollbar-track-gray-800 scrollbar-thumb-blue-500">
         {/* Projects */}
         {trabajos.map((trabajo, i) => (
           <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
@@ -49,11 +49,11 @@ function Projects({}: Props) {
                 href="https://moviedb-d6788.web.app/index.html"
                 target="_blank"
               >
-                <h4 className="underline decoration-secondary/50 text-4xl font-semibold text-center">
+                <h4 className="underline decoration-blue-500 dark:decoration-secondary/50 text-4xl font-semibold text-center">
                   Proyecto {i + 1} de {trabajos.length}
                 </h4>
               </Link>
-              <h5 className="text-center text-2xl font-semibold text-gray-400">
+              <h5 className="text-center text-2xl font-semibold text-blue-500 dark:text-gray-400">
                 {trabajo.tecnologias}
               </h5>
               <p className="text-center text-lg md:text-left">
@@ -63,7 +63,7 @@ function Projects({}: Props) {
           </div>
         ))}
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] dark:bg-[#F7AB0A]/10 bg-blue-500/10 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 }
