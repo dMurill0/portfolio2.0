@@ -11,12 +11,9 @@ type Inputs = {
 };
 
 function Contact({}: Props) {
-  const {
-    register,
-    handleSubmit,
-  } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:sittingbout@gmail?subject=${formData.Asunto}&body=Hola, mi nombre es ${formData.Nombre}: ${formData.Mensaje} (${formData.Email})`
+    window.location.href = `mailto:sittingbout@gmail?subject=${formData.Asunto}&body=Hola, mi nombre es ${formData.Nombre}: ${formData.Mensaje} (${formData.Email})`;
   };
 
   return (
@@ -31,7 +28,7 @@ function Contact({}: Props) {
         <div className="space-y-5">
           <div className="flex items-center space-x-3 justify-center">
             <PhoneIcon className="text-blue-500 dark:text-secondary h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+34 630382831</p>
+            <p className="text-2xl">+34 630 38 28 31</p>
           </div>
           <div className="flex items-center space-x-3 justify-center">
             <EnvelopeIcon className="text-blue-500 dark:text-secondary h-7 w-7" />
@@ -39,17 +36,35 @@ function Contact({}: Props) {
             <tr />
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto ">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-1/2 sm:min-w-fit sm:w-fit mx-auto "
+        >
           <div className="flex space-x-2">
-            <input {...register('Nombre')} className="contactInput" type="text" placeholder="Nombre" />
-            <input {...register('Email')}
+            <input
+              {...register("Nombre")}
+              className="contactInput"
+              type="text"
+              placeholder="Nombre"
+            />
+            <input
+              {...register("Email")}
               className="contactInput"
               type="email"
               placeholder="E-Mail"
             />
           </div>
-          <input {...register('Asunto')} className="contactInput" type="text" placeholder="Asunto" />
-          <textarea {...register('Mensaje')} className="contactInput" placeholder="Mensaje" />
+          <input
+            {...register("Asunto")}
+            className="contactInput"
+            type="text"
+            placeholder="Asunto"
+          />
+          <textarea
+            {...register("Mensaje")}
+            className="contactInput"
+            placeholder="Mensaje"
+          />
           <button
             className="bg-blue-500 dark:bg-[#F7AB0A] py-5 px-10 rounded-md text-white dark:text-black font-bold"
             type="submit"
@@ -58,7 +73,6 @@ function Contact({}: Props) {
           </button>
         </form>
       </div>
-      
     </div>
   );
 }

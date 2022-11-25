@@ -21,11 +21,11 @@ export default function Skills({}: Props) {
       <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
-      <h3 className="absolute top-32 uppercase tracking-[3px] text-gray-500 text-sm">
+      <h3 className="absolute top-32 uppercase tracking-[3px] text-gray-500 text-sm hidden md:block">
         Pase el ratón sobre la skill para más info
       </h3>
       {/* SKILLS */}
-      <div className="grid grid-cols-3 gap-1 md:grid-cols-4 xl:grid-cols-4 mt-20">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 md:grid-cols-4 mt-20">
         {/* HTML */}
         <div className="group relative flex cursor-pointer">
           <motion.img
