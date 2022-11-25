@@ -17,6 +17,7 @@ export default function Content({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -47,8 +48,11 @@ export default function Content({}: Props) {
         </h2>
         <h1 className="text-4xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          { }
-          <Cursor cursorColor="#F7AB0A" />
+          {document.documentElement.classList.contains("dark") ? (
+            <Cursor cursorColor="#F7AB0A" />
+          ) : (
+            <Cursor cursorColor="#3b82f6" />
+          )}
         </h1>
         <div className="pt-5 ">
           <Link href="#about">

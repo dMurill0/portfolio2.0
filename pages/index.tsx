@@ -9,6 +9,7 @@ import Content from "../components/Content";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -41,13 +42,7 @@ export default function Home() {
       <Link href="#content">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <Image
-              className="w-5 rounded-full filter grayscale hover:grayscale-0"
-              src="/up.png"
-              alt=""
-              width="5"
-              height="5"
-            />
+            <BsFillArrowUpCircleFill className="text-3xl text-blue-400 dark:text-secondary/80"/>
           </div>
         </footer>
       </Link>
