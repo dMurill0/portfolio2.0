@@ -17,11 +17,11 @@ export default function Content({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
-  const [_document, set_document] = React.useState(null);
+  // const [_document, set_document] = React.useState(null);
 
-  React.useEffect(() => {
-    set_document(document);
-  }, []);
+  // React.useEffect(() => {
+  //   set_document(document);
+  // }, []);
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
