@@ -178,7 +178,7 @@ export default function Skills({}: Props) {
               <p className="text-2xl font-bold text-black opacity-100 text-center">
                 PYTHON
               </p>
-              <Image src="/3stars.png" alt="" width="100" height="100" />
+              <Image src="/3stars.png" alt="" width="100" height="100" className="bg-white"/>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Skills({}: Props) {
               <p className="text-2xl font-bold text-black opacity-100 text-center">
                 NODE
               </p>
-              <Image src="/3stars.png" alt="" width="100" height="100" />
+              <Image src="/3stars.png" alt="" width="100" height="100" className="bg-white"/>
             </div>
           </div>
         </div>
@@ -334,7 +334,7 @@ export default function Skills({}: Props) {
               <p className="text-2xl font-bold text-black opacity-100 text-center">
                 VUE.JS
               </p>
-              <Image src="/3stars.png" alt="" width="100" height="100" />
+              <Image src="/3stars.png" alt="" width="100" height="100" className="bg-white"/>
             </div>
           </div>
         </div>

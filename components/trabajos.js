@@ -1,5 +1,13 @@
 export const trabajos = [
     {
+        "id": "project22",
+        "nombre": "Movies2",
+        "url": "https://movies2-henna.vercel.app/",
+        "tecnologias": "React,Tailwind",
+        "categorias": "Front-end,API",
+        "descripcion": "Aplicación que muestra las películas y series más populares y nos muestra la imagen de portada, puntuación en imdb y la sinospsis. Además se puede realizar una búsqueda entre todas las películas o series. "
+    },
+    {
         "id": "project10",
         "nombre": "Shopie. Tienda online de zapatillas",
         "url": "https://shopie2.vercel.app/",

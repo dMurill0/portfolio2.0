@@ -40,12 +40,12 @@ export default function Header({}: Props) {
         }}
       >
         {/* {Social Icons} */}
-        <div className="flex justify-around w-40">
+        <div className="flex justify-around w-40 ">
           <Link href="https://www.linkedin.com/in/daniel-murillo-garz%C3%B3n-0bb8b014b/">
             <FaLinkedinIn className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
           </Link>
           <Link href="https://github.com/dMurill0">
-            <FaGithub className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
+            <FaGithub className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full px-1 sm:py-2" />
           </Link>
           <Link href="https://twitter.com/MuRiPKR">
             <FaTwitter className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
