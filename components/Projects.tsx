@@ -45,10 +45,7 @@ function Projects({}: Props) {
               <img className="h-60 mt-10 " src={`/${trabajo.id}.jpg`} alt="" />
             </Link>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <Link
-                href="https://moviedb-d6788.web.app/index.html"
-                target="_blank"
-              >
+              <Link href={trabajo.url} target="_blank">
                 <h4 className="underline decoration-blue-500 dark:decoration-secondary/50 text-4xl font-semibold text-center">
                   Proyecto {i + 1} de {trabajos.length}
                 </h4>
