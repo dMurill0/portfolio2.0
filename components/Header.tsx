@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiMoon } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
+import { ImBlogger } from "react-icons/im";
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { icons } from "react-icons";
 type Props = {};
@@ -49,6 +50,9 @@ export default function Header({}: Props) {
           </Link>
           <Link href="https://twitter.com/MuRiPKR">
             <FaTwitter className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
+          </Link>
+          <Link href="/blog">
+            <ImBlogger className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
           </Link>
         </div>
         {/* <SocialIcon
@@ -97,10 +101,7 @@ export default function Header({}: Props) {
           duration: 1,
         }}
       >
-        <Link
-          className="flex justify-around items-center mr-5"
-          href="#contact"
-        >
+        <Link className="flex justify-around items-center mr-5" href="#contact">
           {/* <SocialIcon
             className="cursor-pointer rounded-full hover:bg-blue-500 dark:hover:bg-secondary/80 mr-2"
             network="email"

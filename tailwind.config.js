@@ -12,7 +12,10 @@ module.exports = {
         secondary: "#F7AB0A"
       },
       fontFamily: {
-
+        oswald: ['Oswald'],
+        poppins: ['Poppins'],
+        roboto: ['Roboto'],
+        manrope: ['Manrope']
       }
     },
   },
