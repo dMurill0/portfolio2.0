@@ -4,10 +4,14 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
+import { log } from "console";
 
 type Props = {};
 
 export default function Content({}: Props) {
+  // const theme = document.documentElement.classList.contains("dark");
+  // console.log("el tema es: " + theme);
+
   const [text, count] = useTypewriter({
     words: [
       "Hola, soy Daniel Murillo",
@@ -17,11 +21,7 @@ export default function Content({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
-  // const [_document, set_document] = React.useState(null);
 
-  // React.useEffect(() => {
-  //   set_document(document);
-  // }, []);
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -52,7 +52,7 @@ export default function Content({}: Props) {
         </h2>
         <h1 className="text-4xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          {}
+          {/* {theme === "dark" ? <Cursor  cursorColor="#F7AB0A" />: <Cursor  cursorColor="#F7AB0A" />} */}
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         <div className="pt-5 ">

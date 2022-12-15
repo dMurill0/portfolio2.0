@@ -2,6 +2,7 @@
 module.exports = {
   darkMode: 'class',
   content: [
+    "./node_modules/flowbite-react/**/*.js",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*{js,ts,jsx,tsx}",
   ],
@@ -15,11 +16,13 @@ module.exports = {
         oswald: ['Oswald'],
         poppins: ['Poppins'],
         roboto: ['Roboto'],
-        manrope: ['Manrope']
+        manrope: ['Manrope'],
+        handle: ['Handlee']
       }
     },
   },
   plugins: [
     require('tailwind-scrollbar'),
+    require("flowbite/plugin")
   ],
 }

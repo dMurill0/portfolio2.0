@@ -51,33 +51,10 @@ export default function Header({}: Props) {
           <Link href="https://twitter.com/MuRiPKR">
             <FaTwitter className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
           </Link>
-          <Link href="/blog">
+          <Link href="/blog" className="">
             <ImBlogger className="text-3xl sm:text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1 sm:py-2" />
           </Link>
         </div>
-        {/* <SocialIcon
-          className="rounded-full hover:bg-blue-500 dark:hover:bg-secondary/80"
-          url="https://www.linkedin.com/in/daniel-murillo-garz%C3%B3n-0bb8b014b/"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-        />
-        <SocialIcon
-          className="rounded-full hover:bg-blue-500 dark:hover:bg-secondary/80"
-          network="github"
-          url="https://github.com/dMurill0"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-        />
-        <SocialIcon
-          className="rounded-full hover:bg-blue-500 dark:hover:bg-secondary/80"
-          network="twitter"
-          url="https://twitter.com/MuRiPKR"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-        /> */}
       </motion.div>
       {/* DARK MODE */}
       <button>
@@ -102,19 +79,7 @@ export default function Header({}: Props) {
         }}
       >
         <Link className="flex justify-around items-center mr-5" href="#contact">
-          {/* <SocialIcon
-            className="cursor-pointer rounded-full hover:bg-blue-500 dark:hover:bg-secondary/80 mr-2"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-            href="#contact"
-          /> */}
-
           <AiOutlineMail className="text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-2" />
-
-          {/* <p className="uppercase hidden md:inline-flex text-sm hover:text-blue-500 dark:text-gray-400 dark:hover:text-secondary/80 ml-4">
-            Contacta conmigo
-          </p> */}
         </Link>
       </motion.div>
     </header>
