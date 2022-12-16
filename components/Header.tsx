@@ -20,7 +20,10 @@ export default function Header({}: Props) {
   }, [theme]);
 
   const handleSwitch = () => {
+    let localTheme = window.localStorage;
     setTheme(theme === "dark" ? "light" : "dark");
+   window.localStorage.setItem("theme", theme);
+    console.log(localTheme);
   };
 
   return (

@@ -1,25 +1,45 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import FooterBlog from "../components/FooterBlog";
 import HeaderBlog from "../components/HeaderBlog";
 import UltimosPosts from "../components/UltimosPosts";
+import React, { useEffect, useState } from "react";
+import { HiMoon } from "react-icons/hi";
 
 type Props = {};
 
 function Blog({}: Props) {
+  const tema = window.localStorage.getItem("theme");
+  const [theme, setTheme] = useState(tema);
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+  const handleSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+    console.log(theme);
+  };
   return (
     <div className="h-fit w-screen scroll-smooth bg-[#fff] m-0 p-0 font-handle selection:bg-[#29aae1]">
-      <img
+      {/* <img
         src="/blog_bg.png"
         className="absolute h-[300px] bottom-0 -rotate-180 w-screen z-10"
         alt=""
-      />
+      /> */}
       <h1 className="absolute left:0 text-4xl text-blue-300 font-bold m-4 ml-16 uppercase underline">
         Daniel Murillo
       </h1>
+      <button>
+        <HiMoon
+          className="text-4xl bg-blue-500 text-white dark:bg-secondary/80 rounded-full py-1"
+          onClick={handleSwitch}
+        />
+      </button>
       <div className="absolute left-40 top-60">
         <h1 className="text-8xl first-line:tracking-widest first-letter:text-8xl first-letter:font-extrabold first-letter:mr-2 font-thin first-letter:uppercase text-blue-500 title ">
           Mi blog personal
@@ -45,7 +65,10 @@ function Blog({}: Props) {
                 </h5>
               </a>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis temporibus at numquam, consequatur adipisci inventore, nostrum repellat eos consectetur placeat maiores? Totam dolorem adipisci expedita nemo commodi? Aliquid, consectetur fuga.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Facilis temporibus at numquam, consequatur adipisci inventore,
+                nostrum repellat eos consectetur placeat maiores? Totam dolorem
+                adipisci expedita nemo commodi? Aliquid, consectetur fuga.
               </p>
               <a
                 href="#"
@@ -109,7 +132,6 @@ function Blog({}: Props) {
               </a>
             </div>
           </div>
-          
         </div>
         {/* <div className="bg-slate-100 w-1/2 h-1/3 rounded-t-xl m-6 mt-12 absolute rotate-12 space-y-4 flex flex-col">
           <div className="flex justify-between">
