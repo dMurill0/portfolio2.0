@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
@@ -8,10 +8,9 @@ import { log } from "console";
 
 type Props = {};
 
-export default function Content({}: Props) {
+export default function Content({theme}: Props) {
   // const theme = document.documentElement.classList.contains("dark");
   // console.log("el tema es: " + theme);
-
   const [text, count] = useTypewriter({
     words: [
       "Hola, soy Daniel Murillo",
@@ -21,6 +20,7 @@ export default function Content({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+
 
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
@@ -52,8 +52,11 @@ export default function Content({}: Props) {
         </h2>
         <h1 className="text-4xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          {/* {theme === "dark" ? <Cursor  cursorColor="#F7AB0A" />: <Cursor  cursorColor="#F7AB0A" />} */}
-          <Cursor cursorColor="#F7AB0A" />
+          {theme === "dark" ? (
+            <Cursor cursorColor="#F7AB0A" />
+          ) : (
+            <Cursor cursorColor="#3f83f8" />
+          )}
         </h1>
         <div className="pt-5 ">
           <Link href="#about">

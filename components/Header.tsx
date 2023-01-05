@@ -9,22 +9,8 @@ import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { icons } from "react-icons";
 type Props = {};
 
-export default function Header({}: Props) {
-  const [theme, setTheme] = useState("light");
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+export default function Header({theme, handleSwitch}: Props) {
 
-  const handleSwitch = () => {
-    let localTheme = window.localStorage;
-    setTheme(theme === "dark" ? "light" : "dark");
-   window.localStorage.setItem("theme", theme);
-    console.log(localTheme);
-  };
 
   return (
     <header className="flex justify-between sticky top-0 max-w-7xl mx-auto z-20 xl: items-center">
