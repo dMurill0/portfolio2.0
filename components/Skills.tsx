@@ -21,7 +21,7 @@ export default function Skills({}: Props) {
       <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
-      <h3 className="absolute top-32 uppercase tracking-[3px] text-gray-500 text-sm hidden md:block">
+      <h3 className="absolute top-32 uppercase tracking-[3px] text-gray-500 text-sm hidden md:block mb-6">
         Pase el ratón sobre la skill para más info
       </h3>
       {/* SKILLS */}
