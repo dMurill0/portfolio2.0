@@ -32,7 +32,7 @@ function Projects({}: Props) {
       transition={{
         duration: 1.5,
       }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 "
+      className="space-y-4 h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 "
     >
       <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl text-center hidden xl:block">
         Proyectos
@@ -42,9 +42,9 @@ function Projects({}: Props) {
         {trabajos.map((trabajo, i) => (
           <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
             <Link href={trabajo.url} target="_blank">
-              <img className="h-60 mt-10 " src={`/${trabajo.id}.jpg`} alt="" />
+              <img className="max-h-40 " src={`/${trabajo.id}.jpg`} alt="" />
             </Link>
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-4 px-0 md:px-10 max-w-6xl">
               <Link href={trabajo.url} target="_blank">
                 <h4 className="underline decoration-blue-500 dark:decoration-secondary/50 text-4xl font-semibold text-center">
                   Proyecto {i + 1} de {trabajos.length}
@@ -53,7 +53,7 @@ function Projects({}: Props) {
               <h5 className="text-center text-2xl font-semibold text-blue-500 dark:text-gray-400">
                 {trabajo.tecnologias}
               </h5>
-              <p className="text-center text-lg md:text-left">
+              <p className="p-4 px-8 bg-[#fff] dark:bg-[#242424] dark:text-white rounded-full text-center text-md md:text-left">
                 {trabajo.descripcion}
               </p>
             </div>
