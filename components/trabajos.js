@@ -8,6 +8,14 @@ export const trabajos = [
         "descripcion": "Aplicación que muestra las películas y series más populares y nos muestra la imagen de portada, puntuación en imdb y la sinospsis. Además se puede realizar una búsqueda entre todas las películas o series. "
     },
     {
+        "id": "project23",
+        "nombre": "MealAPI. Web de recetas",
+        "url": "https://meal-api-theta.vercel.app/",
+        "tecnologias": "NextJs, API, Tailwind",
+        "categorias": "Desarrollo web, API, Tailwind",
+        "descripcion": "MealAPI. Web de recetas en inglés donde poder inspirarse con recetas de todo el mundo. Podrás ver su elaboración, dificultad y contenido calórico."
+    },
+    {
         "id": "project10",
         "nombre": "Shopie. Tienda online de zapatillas",
         "url": "https://shopie2.vercel.app/",
